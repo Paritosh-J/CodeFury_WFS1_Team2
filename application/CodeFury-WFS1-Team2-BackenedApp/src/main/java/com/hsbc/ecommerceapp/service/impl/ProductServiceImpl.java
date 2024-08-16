@@ -1,5 +1,6 @@
 package com.hsbc.ecommerceapp.service.impl;
 
+import com.hsbc.ecommerceapp.exceptions.ProductNotFoundException;
 import com.hsbc.ecommerceapp.model.Product;
 import com.hsbc.ecommerceapp.service.ProductService;
 import com.hsbc.ecommerceapp.storage.ProductStorage;

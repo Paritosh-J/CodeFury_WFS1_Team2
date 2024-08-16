@@ -1,5 +1,7 @@
 package com.hsbc.ecommerceapp.service.impl;
 
+import com.hsbc.ecommerceapp.exceptions.InvalidInputException;
+import com.hsbc.ecommerceapp.exceptions.UserNotFoundException;
 import com.hsbc.ecommerceapp.model.Customer;
 import com.hsbc.ecommerceapp.model.Subscription;
 import com.hsbc.ecommerceapp.service.CustomerService;

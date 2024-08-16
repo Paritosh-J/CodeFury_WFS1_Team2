@@ -1,5 +1,7 @@
 package com.hsbc.ecommerceapp.service.impl;
 
+import com.hsbc.ecommerceapp.exceptions.InvalidInputException;
+import com.hsbc.ecommerceapp.exceptions.UserNotFoundException;
 import com.hsbc.ecommerceapp.model.User;
 import com.hsbc.ecommerceapp.service.UserService;
 import com.hsbc.ecommerceapp.storage.UserStorage;
@@ -34,7 +36,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User loginUser(String username, String password) {
-        User user = userStorage.getUserByUsername(username);
+        User user = userStorage.getUserByUserName(username);
         if (user == null || !user.getPassword().equals(password))
             throw new UserNotFoundException("Invalid username or password");
         return user;
