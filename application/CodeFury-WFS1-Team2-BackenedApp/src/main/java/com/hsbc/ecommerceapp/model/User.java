@@ -5,6 +5,13 @@ import java.util.Objects;
 public class User {
     protected String userId, userName, password, email;
 
+    public User(String userId, String userName, String password, String email) {
+        this.userId = userId;
+        this.userName = userName;
+        this.password = password;
+        this.email = email;
+    }
+
     public String getUserId() {
         return userId;
     }
@@ -38,16 +45,6 @@ public class User {
     }
 
     @Override
-    public String toString() {
-        return "User{" +
-                "userId='" + userId + '\'' +
-                ", userName='" + userName + '\'' +
-                ", password='" + password + '\'' +
-                ", email='" + email + '\'' +
-                '}';
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -60,10 +57,13 @@ public class User {
         return Objects.hashCode(userId);
     }
 
-    public User(String userId, String userName, String password, String email) {
-        this.userId = userId;
-        this.userName = userName;
-        this.password = password;
-        this.email = email;
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId='" + userId + '\'' +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }

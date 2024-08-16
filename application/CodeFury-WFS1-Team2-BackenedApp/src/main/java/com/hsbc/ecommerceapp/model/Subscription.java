@@ -4,20 +4,18 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public class Subscription {
-    @Override
-    public String toString() {
-        return "Subscription{" +
-                "subscriptionId='" + subscriptionId + '\'' +
-                ", productId='" + productId + '\'' +
-                ", customerId='" + customerId + '\'' +
-                ", type='" + type + '\'' +
-                ", startDate=" + startDate +
-                ", endDate=" + endDate +
-                '}';
-    }
 
     private String subscriptionId, productId, customerId, type;
     private LocalDate startDate, endDate;
+
+    public Subscription(String subscriptionId, String productId, String customerId, String type, LocalDate startDate, LocalDate endDate) {
+        this.subscriptionId = subscriptionId;
+        this.productId = productId;
+        this.customerId = customerId;
+        this.type = type;
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -34,15 +32,6 @@ public class Subscription {
 
     public String getSubscriptionId() {
         return subscriptionId;
-    }
-
-    public Subscription(String subscriptionId, String productId, String customerId, String type, LocalDate startDate, LocalDate endDate) {
-        this.subscriptionId = subscriptionId;
-        this.productId = productId;
-        this.customerId = customerId;
-        this.type = type;
-        this.startDate = startDate;
-        this.endDate = endDate;
     }
 
     public void setSubscriptionId(String subscriptionId) {
@@ -89,4 +78,19 @@ public class Subscription {
         this.endDate = endDate;
     }
 
+    @Override
+    public String toString() {
+        return "Subscription{" +
+                "subscriptionId='" + subscriptionId + '\'' +
+                ", productId='" + productId + '\'' +
+                ", customerId='" + customerId + '\'' +
+                ", type='" + type + '\'' +
+                ", startDate=" + startDate +
+                ", endDate=" + endDate +
+                '}';
+    }
+
+    public void setActive(boolean b) {
+
+    }
 }

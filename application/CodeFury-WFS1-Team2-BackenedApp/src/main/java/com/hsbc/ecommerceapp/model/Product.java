@@ -7,6 +7,14 @@ public class Product {
     private double price;
     private boolean isActive;
 
+    public Product(String productId, String productName, String productDescription, double price, boolean isActive) {
+        this.productId = productId;
+        this.productName = productName;
+        this.productDescription = productDescription;
+        this.price = price;
+        this.isActive = isActive;
+    }
+
     public String getProductId() {
         return productId;
     }
@@ -24,24 +32,6 @@ public class Product {
         return Objects.hashCode(productId);
     }
 
-    @Override
-    public String toString() {
-        return "Product{" +
-                "productId='" + productId + '\'' +
-                ", productName='" + productName + '\'' +
-                ", productDescription='" + productDescription + '\'' +
-                ", price=" + price +
-                ", isActive=" + isActive +
-                '}';
-    }
-
-    public Product(String productId, String productName, String productDescription, double price, boolean isActive) {
-        this.productId = productId;
-        this.productName = productName;
-        this.productDescription = productDescription;
-        this.price = price;
-        this.isActive = isActive;
-    }
 
     public void setProductId(String productId) {
         this.productId = productId;
@@ -77,5 +67,16 @@ public class Product {
 
     public void setActive(boolean active) {
         isActive = active;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "productId='" + productId + '\'' +
+                ", productName='" + productName + '\'' +
+                ", productDescription='" + productDescription + '\'' +
+                ", price=" + price +
+                ", isActive=" + isActive +
+                '}';
     }
 }
